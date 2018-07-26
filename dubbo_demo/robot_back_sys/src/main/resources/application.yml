@@ -1,0 +1,25 @@
+server:
+  port: 9999
+spring:
+  mvc:
+    view:
+      suffix: .jsp
+      prefix: /
+  dubbo:
+    application:
+      name: robot_back_sys
+    registry:
+      address: zookeeper://192.168.23.135:2181
+    base-package: com.baizhi.controller #服务调用者所在包
+
+
+  datasource:
+    type: org.apache.commons.dbcp.BasicDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dubbo
+    username: root
+    password: root
+
+
+
+
